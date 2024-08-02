@@ -99,14 +99,23 @@ addBookBtn.addEventListener("click", () => {
 })
 
 //"Add" button on dialog adds book info to array, resets the form and closes the dialog
-addFormBtn.addEventListener("click", () => {
+/* addFormBtn.addEventListener("submit", (e) => {
+    e.preventDefault();
     addBook();
+    addBookForm.reset();
+    dialog.close();
+}) */
+
+//"Cancel" button on dialog resets the form and closes the dialog
+cancelFormBtn.addEventListener("click", (e) => {
+    e.preventDefault();
     addBookForm.reset();
     dialog.close();
 })
 
-//"Cancel" button on dialog resets the form and closes the dialog
-cancelFormBtn.addEventListener("click", () => {
+function SubmitForm() {
+    //preventDefault();
+    addBook();
     addBookForm.reset();
     dialog.close();
-})
+}
